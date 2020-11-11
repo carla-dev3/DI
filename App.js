@@ -13,24 +13,40 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar,
-  Colors,
 } from 'react-native';
 
-import {Input, Button} from 'react-native-elements';
+import {Input, Button, Header} from 'react-native-elements';
+
+const myBody = () => {
+
+}
+
+const miHeader = () => {
+  return(
+    <View>
+  <Header
+   placement="left"
+   leftComponent={{ icon: 'menu', color: '#09357A' }}
+   centerComponent={{ text: 'EVENTOS', style: { color: '#09357A' } }}
+   rightComponent={{ icon: 'home', color: '#09357A' }}/>
+ </View>
+  )
+ }
+
 
 class App extends Component {
   render() {
   return (
     <>
+    {miHeader()}
       <View style={styles.contenedor}>
       <View style={styles.seccion1}>
         <Text>Seccion 1</Text>
       </View>
-      <View style={styles.seccio2}>
+      <View style={styles.seccion2}>
         <Text>Seccion 2</Text>
       </View>
-      <View style={styles.seccio3}>
+      <View style={styles.seccion3}>
         <Text>Seccion 3</Text>
       </View>
       </View>
@@ -56,7 +72,7 @@ const styles = StyleSheet.create({
     padding: 12,
     textAlign: 'right',
   },
-  seccio2: {
+  seccion2: {
     flex:1,
     borderColor:'green',
     borderWidth:3,
@@ -66,7 +82,7 @@ const styles = StyleSheet.create({
     padding: 12,
     textAlign: 'center',
     },
-    seccio3: {
+    seccion3: {
       flex:1,
       borderColor:'blue',
       borderWidth:3,
@@ -76,42 +92,7 @@ const styles = StyleSheet.create({
       padding: 12,
       textAlign: 'left',
       },      
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  
 });
 
 export default App;
