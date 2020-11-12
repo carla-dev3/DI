@@ -15,10 +15,70 @@ import {
   Text,
 } from 'react-native';
 
-import {Input, Button, Header} from 'react-native-elements';
+import {Input, Button, Header, Image} from 'react-native-elements';
 
 const myBody = () => {
-
+  return (
+    <View style={styles.contenedor}>
+    <View style={styles.contenedorEvento}>
+      <View style={styles.fechaEvento}><Text>07-10-2020</Text></View>
+      <View style={styles.equiposEvento}>
+        <View style={styles.equipo}>
+        <Image source={{ uri: 'https://i.imgur.com/JwTyXcw.png'}}
+          style={{ width: 80, height: 80 }}
+        />
+        </View>
+        <View style={styles.equipo}><Text>VS</Text></View>
+        <View style={styles.equipo}>
+        <Image source={{ uri: 'https://i.imgur.com/htAyytH.png'}}
+          style={{ width: 80, height: 80 }}
+        />
+        </View>
+      </View>
+      <View style={styles.accionesEvento}>
+        <Button title="+"></Button>
+      </View>
+    </View>
+    <View style={styles.contenedorEvento}>
+      <View style={styles.fechaEvento}><Text>10-10-2020</Text></View>
+      <View style={styles.equiposEvento}>
+      <View style={styles.equipo}>
+      <Image source={{ uri: 'https://i.imgur.com/SXI9LEm.png'}}
+        style={{ width: 80, height: 80 }}
+      />
+      </View>
+        <View style={styles.equipo}><Text>VS</Text></View>
+        <View style={styles.equipo}>
+        <Image source={{ uri: 'https://i.imgur.com/0kjJAcO.png'}}
+          style={{ width: 80, height: 80 }}
+        />
+        </View>
+      </View>
+      <View style={styles.accionesEvento}>
+      <Button title="+"></Button>
+      </View>
+    </View>
+    <View style={styles.contenedorEvento}>
+      <View style={styles.fechaEvento}><Text>10-10-2020</Text></View>
+      <View style={styles.equiposEvento}>
+      <View style={styles.equipo}>
+      <Image source={{ uri: 'https://i.imgur.com/T98bIVd.png'}}
+        style={{ width: 80, height: 80 }}
+      />
+      </View>
+        <View style={styles.equipo}><Text>VS</Text></View>
+        <View style={styles.equipo}>
+        <Image source={{ uri: 'https://i.imgur.com/bIUYbQ8.png'}}
+          style={{ width: 80, height: 80 }}
+        />
+        </View>
+      </View>
+      <View style={styles.accionesEvento}>
+      <Button title="+"></Button>
+      </View>
+    </View>
+    </View>
+  )  
 }
 
 const miHeader = () => {
@@ -39,59 +99,70 @@ class App extends Component {
   return (
     <>
     {miHeader()}
-      <View style={styles.contenedor}>
-      <View style={styles.seccion1}>
-        <Text>Seccion 1</Text>
-      </View>
-      <View style={styles.seccion2}>
-        <Text>Seccion 2</Text>
-      </View>
-      <View style={styles.seccion3}>
-        <Text>Seccion 3</Text>
-      </View>
-      </View>
+    {myBody()}
     </>
   );
   }
 };
 
 const styles = StyleSheet.create({
-  contenedor: {
+  
+  equipo: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  accionesEvento: {
+    flex: 1,
+    flexDirection: 'row',
     borderColor: 'green',
-    borderWidth: 5,
+    borderWidth: 0,
+    alignItems: 'center',
+    justifyContent: 'flex-end',
+    
   },
-  seccion1: {
+  equiposEvento: {
+    flex: 3,
+    flexDirection: 'row',
+    
+    borderWidth: 1,
+    width: '100%',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  fechaEvento: {
+    flex: 1,
+    borderWidth: 1,
+  },
+  contenedorEvento: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderColor: 'blue',
+  },
+  fecha: {
+    justifyContent: 'center',
+    display: 'flex',
+    fontSize: 20, 
+    paddingLeft: 125,
+    color: 'white',
+    flexDirection: 'row',
+  },
+  contenedor: {
     flex:1,
-    borderColor:'red',
+    flexDirection: 'column',
+    display: 'flex',
+    borderColor:'blue',
     borderWidth:3,
     fontSize: 12,
     fontWeight: '600',
-    margin: 4,
+    margin: 2,
     padding: 12,
-    textAlign: 'right',
+    backgroundColor: '#09357A',
   },
-  seccion2: {
-    flex:1,
-    borderColor:'green',
-    borderWidth:3,
-    fontSize: 12,
-    fontWeight: '600',
-    margin: 4,
-    padding: 12,
-    textAlign: 'center',
-    },
-    seccion3: {
-      flex:1,
-      borderColor:'blue',
-      borderWidth:3,
-      fontSize: 12,
-      fontWeight: '600',
-      margin: 4,
-      padding: 12,
-      textAlign: 'left',
-      },      
   
 });
 
