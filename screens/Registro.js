@@ -6,7 +6,7 @@ import {
   Button,
 } from 'react-native';
 
-import {Header} from 'react-native-elements';
+import {Header, Input} from 'react-native-elements';
 
 export default class Registro extends Component {
   render() {
@@ -48,6 +48,7 @@ export default class Registro extends Component {
             <Button
             title="Volver"/>
             </View>
+
 
         </View>   
     );
