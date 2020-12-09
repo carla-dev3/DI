@@ -22,14 +22,44 @@ export default class AgregarTarjeta extends Component {
                 rightComponent={{ icon: 'home', color: '#09357A' }}/>
             </View>  
 
-            <View
-      style={{
-        backgroundColor: value,
-        borderBottomColor: '#000000',
-        borderBottomWidth: 1,
-      }}>
-    </View>
-            
+            <View style={styles.login}>
+            <Text style={[styles.login, {fontSize: 32, letterSpacing: 8, fontFamily: 'arial' }]}>Email</Text>
+            </View>
+            <View style={{paddingLeft: 20}}>
+            <Input
+              placeholder='Email'
+              leftIcon={{ type: 'font-awesome', name: 'user', color: 'grey'}}
+            />
+            </View>
+
+            <View>
+            <Text style={{paddingTop: 15, color: 'white', fontWeight: 'bold', paddingLeft: 30, fontSize: 15, letterSpacing: 8 }}></Text>
+            </View>
+
+            <View style={{paddingLeft: 20}}>
+            <Input
+            placeholder='contraseña'
+            leftIcon={{type: 'font-awesome', name: 'lock', color: 'grey'}}
+            secureTextEntry={true}
+            style={{paddingBottom: 0, height: 1}}
+            />
+            <Text style={{textDecorationLine: 'underline', alignSelf: 'flex-end', color: '#fff',}}>Cambiar contraseña</Text>
+            </View>
+
+            <View style {{alignSelf: 'flex-start', marginLeft: 140}}>
+            <Button
+              buttonStyle={{backgroundColor: '#169BD5'}}
+              title='Apuestas'
+            />
+            </View>
+
+            <View style={{alignSelf: 'flex-end', marginLeft: 120}}>
+            <Button
+              buttonStyle={{backgroundColor: '#169BD5'}}
+              title='Ingresar tarjeta'
+            />
+            </View>
+
             <View style={styles.containerButtonAtras}>
             <Button
             title="Volver"/>     
@@ -50,37 +80,6 @@ const styles = StyleSheet.create({
   containerHeader: {
     height: 60,
     top: 0,
-    left: 0,
-    right: 0,
-    position: 'absolute',
-},
-containerCreditCard: {
-  paddingLeft: 110,
-  top: 100,
-  left: 0,
-  right: 0,
-  position: 'absolute',
-},
-containerNumTarjeta: {
-  height: 50,
-    flexDirection:'row',
-    justifyContent:'center',
-    backgroundColor:'#ffffff',
-    marginLeft: 30,
-    marginRight: 100,
-    top: 350,
-    left: 0,
-    right: 0,
-    position: 'absolute',
-},
-containerEmail: {
-  height: 50,
-    flexDirection:'row',
-    justifyContent:'center',
-    backgroundColor:'#ffffff',
-    marginLeft: 30,
-    marginRight: 100,
-    top: 420,
     left: 0,
     right: 0,
     position: 'absolute',
