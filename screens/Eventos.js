@@ -8,29 +8,15 @@ import {
 } from 'react-native';
 
 import {Input, Button, Header, Image} from 'react-native-elements';
+import {Partidos} from '../components';
 
 const myBody = () => {
   return (
     <View style={styles.contenedor}>
     <View style={styles.contenedorEvento}>
-      <View style={styles.fechaEvento}><Text>07-10-2020</Text></View>
-      <View style={styles.equiposEvento}>
-        <View style={styles.equipo}>
-        <Image source={{ uri: 'https://i.imgur.com/JwTyXcw.png'}}
-          style={{ width: 80, height: 80 }}
-        />
-        </View>
-        <View style={styles.equipo}><Text>VS</Text></View>
-        <View style={styles.equipo}>
-        <Image source={{ uri: 'https://i.imgur.com/htAyytH.png'}}
-          style={{ width: 80, height: 80 }}
-        />
-        </View>
+      <View>
+        <Partidos></Partidos>
       </View>
-      <View style={styles.accionesEvento}>
-        <Button title="+"></Button>
-      </View>
-    </View>
     <View style={styles.contenedorEvento}>
       <View style={styles.fechaEvento}><Text>10-10-2020</Text></View>
       <View style={styles.equiposEvento}>
@@ -68,6 +54,7 @@ const myBody = () => {
       <View style={styles.accionesEvento}>
       <Button title="+"></Button>
       </View>
+    </View>
     </View>
     </View>
   )  

@@ -6,28 +6,23 @@ import {
   Button,
 } from 'react-native';
 
-import {Header, Input} from 'react-native-elements';
+import {Input} from 'react-native-elements';
+import HeaderApp from '../components/HeaderApp';
 
 export default class Apostar extends Component {
     render() {
       return (
-          <View style={styles.container}>
-           <View style={styles.containerHeader}>
-              <Header
-                  placement="left"
-                  leftComponent={{ icon: 'menu', color: '#09357A' }}
-                  centerComponent={{ text: 'REALIZAR APUESTA', style: { color: '#09357A' } }}
-                  rightComponent={{ icon: 'home', color: '#09357A' }}/>
-            
-          
+        <>
+          <View style={styles.container}>         
+       
 
+            
               <View style={styles.containerButtonAtras}>
               <Button
               title="Volver"/>
               </View>
-
-            </View>
           </View>  
+        </>  
       );
     };
   };
@@ -40,13 +35,6 @@ export default class Apostar extends Component {
     alignItems: 'stretch',
     backgroundColor: '#09357A',
   },
-  containerHeader: {
-    height: 60,
-    top: 0,
-    left: 0,
-    right: 0,
-    position: 'absolute',
-},
   containerButtonAtras: {
     height: 20,
     marginLeft: 6,
