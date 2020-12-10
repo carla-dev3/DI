@@ -8,27 +8,26 @@ import {
 
 //import {RadioButton} from 'react-native-paper';
 import {Input} from 'react-native-elements';
-import HeaderApp from '../components/HeaderApp';
 
 export default class Apostar extends Component {
     render() {
       return (
         <>
           <View style={styles.container}>   
-          <HeaderApp></HeaderApp>  
+          
 
        <RadioButton.Group onValueChange={newValue => setValue(newValue)} value={value}>
          <View style={{ flexDirection: 'row'}}>
          <Text style={{ alignSelf: 'center', fontFamily: 'Arial', fontSize: 18 }}>Over</Text>
-        <View style={{styles.circulo, {marginLeft: 25}}}>
+        <View style={[styles.circulo, {marginLeft: 25}]}>
           <RadioButton value='first'/>
           <Text style={styles.text}>1.5</Text>
         </View>
-        <View style={{styles.circulo, {marginLeft: 10}}}>
+        <View style={[styles.circulo, {marginLeft: 10}]}>
           <RadioButton value='second'/>
           <Text style={styles.text}>2.5</Text>
         </View>
-        <View style={{styles.circulo, {marginLeft: 10}}}>
+        <View style={[styles.circulo, {marginLeft: 10}]}>
           <RadioButton value='third'/>
           <Text style={styles.text}>3.5</Text>
         </View>

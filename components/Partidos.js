@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+/*import React, {Component} from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -34,4 +34,4 @@ export default class Partidos extends Component {
             </View>
         )
     }
-}
+}*/
