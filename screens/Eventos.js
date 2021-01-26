@@ -5,6 +5,7 @@ import {
   ScrollView,
   View,
   Text,
+  FlatList
 } from 'react-native';
 
 import {Input, Button, Header, Image} from 'react-native-elements';
@@ -55,6 +56,11 @@ const myBody = () => {
       <Button title="+"></Button>
       </View>
     </View>
+    <FlatList
+            data={DATA}
+            keyExtractor={item => item.id}
+            renderItem={renderItem}
+          />
     </View>
     </View>
   )  
