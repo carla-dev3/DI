@@ -6,6 +6,7 @@ import {
   View,
   Text,
   StatusBar,
+  FlatList,
 } from 'react-native';
 
 import {Input, Button, Card} from 'react-native-elements';
@@ -14,15 +15,25 @@ export class ElMeuItem extends Component {
 
     constructor (props) { 
         super(props);
-        this.state = {
+        state = {
+            data:[
+             {name: "Cereals amb xocolata"},
+              {description: "Cereals farcits de xocolata"},
+              {quantity: 2},
+              {category: "Cereals"},
+              {price: 5},
+            ]
+          }
+       /* this.state = {
             name: 'Cereals amb xocolata',
             description: 'Cereals farcits de xocolata',
             quantity: 2,
             category: 'Cereals',
             price: 5,
-        }
-    } 
+        }  */
+    }
     
+
 
     render() {
         return(
@@ -34,7 +45,12 @@ export class ElMeuItem extends Component {
              <Text>{this.state.name}</Text>
              <Text>{this.state.description}</Text>
              <Text style= {{textAlign: 'right'}}> Preu: {this.state.price}</Text>           
-              </View> 
+              </View>  
+              <FlatList
+                data={this.state.data}
+                renderItem={({ item }) => <Text>{item}</Text>}
+                keyExtractor={item => item}
+                />
             </View>
 
         );
