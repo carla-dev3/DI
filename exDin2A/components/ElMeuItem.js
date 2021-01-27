@@ -31,7 +31,7 @@ export class ElMeuItem extends Component {
             {
                 price: 5,
               },
-          ];
+          ]; 
         this.state = {
             name: 'Cereals amb xocolata',
             description: 'Cereals farcits de xocolata',
@@ -39,8 +39,7 @@ export class ElMeuItem extends Component {
             category: 'Cereals',
             price: 5,
         }  
-    }
-    
+    }   
 
     render() {
         const renderItem = () => (
@@ -62,10 +61,8 @@ export class ElMeuItem extends Component {
             keyExtractor={item => item.name}
             renderItem={renderItem}
               />
-              </ScrollView> 
-               
+              </ScrollView>          
             </View>
-
         );
     }
 }

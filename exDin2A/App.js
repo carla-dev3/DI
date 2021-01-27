@@ -20,6 +20,7 @@ import {Input, Button} from 'react-native-elements';
 
 import {ElMeuItem} from './components/ElMeuItem'; 
 import {ElTotal} from './components/ElTotal';
+import {Autor} from './components/Autor';
 
 export class App extends Component {
   render() {
@@ -28,6 +29,7 @@ export class App extends Component {
   
     <ElMeuItem />
     <ElTotal />
+    <Autor />
       </View>
     );
   }

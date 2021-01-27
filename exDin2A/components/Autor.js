@@ -11,30 +11,26 @@ import {
 
 import {Input, Button, Card} from 'react-native-elements';
 
-export class ElTotal extends Component {
+export class Autor extends Component {
 
     constructor (props) { 
         super(props);
-        
-        this.state = {
-            price: 5,
-            resultado: 0,
-            lista: 0
-        }  
-    }
     
-    calculaTotal = () => {
-        //Calcular total de la lista
-        
-    }
+        this.state = {
+            color: 'red',
+            name: 'Carla',
+        }  
+    }  
 
     render() {
+
+        function Autor(props) {
+            return this.props(this.state.nom);
+          }
+
         return(
             <View >
-              <View style={styles.sectionTitle} >
-              <Button title='Calcular total' type="solid" onPress= {this.calculaTotal} /> 
-              <Text>Total: </Text> 
-              </View>               
+            <Text>{this.state.name}</Text>
             </View>
 
         );
