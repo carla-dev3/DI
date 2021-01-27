@@ -15,42 +15,55 @@ export class ElMeuItem extends Component {
 
     constructor (props) { 
         super(props);
-        state = {
-            data:[
-             {name: "Cereals amb xocolata"},
-              {description: "Cereals farcits de xocolata"},
-              {quantity: 2},
-              {category: "Cereals"},
-              {price: 5},
-            ]
-          }
-       /* this.state = {
+        const items = [
+            {
+              name: 'Cereals amb xocolata',
+            },
+            {
+              description: 'Cereals farcits de xocolata',
+            },
+            {
+              quantity: 2,
+            },
+            {
+              category: 'Cereals',
+            },
+            {
+                price: 5,
+              },
+          ];
+        this.state = {
             name: 'Cereals amb xocolata',
             description: 'Cereals farcits de xocolata',
             quantity: 2,
             category: 'Cereals',
             price: 5,
-        }  */
+        }  
     }
     
 
-
     render() {
+        const renderItem = () => (
+            <ElMeuItem></ElMeuItem> );
+
         return(
             <View >
             <View>
-                    <Text style={[{fontSize:24},styles.colorSecundari2]}>Llistat:</Text>
+                <Text style={[{fontSize:24},styles.colorSecundari2]}>Llistat:</Text>
             </View>  
             <View style={styles.sectionTitle}>                     
              <Text>{this.state.name}</Text>
              <Text>{this.state.description}</Text>
-             <Text style= {{textAlign: 'right'}}> Preu: {this.state.price}</Text>           
-              </View>  
-              <FlatList
-                data={this.state.data}
-                renderItem={({ item }) => <Text>{item}</Text>}
-                keyExtractor={item => item}
-                />
+             <Text style= {{textAlign: 'right'}}> Preu: {this.state.price}</Text>                    
+              </View> 
+              <ScrollView>
+              <FlatList 
+                   data={items}
+            keyExtractor={item => item.name}
+            renderItem={renderItem}
+              />
+              </ScrollView> 
+               
             </View>
 
         );

@@ -18,7 +18,8 @@ import {
 
 import {Input, Button} from 'react-native-elements';
 
-import {ElMeuItem} from './components/ElMeuItem';
+import {ElMeuItem} from './components/ElMeuItem'; 
+import {ElTotal} from './components/ElTotal';
 
 export class App extends Component {
   render() {
@@ -26,6 +27,7 @@ export class App extends Component {
       <View style={styles.colorPrimari}>
   
     <ElMeuItem />
+    <ElTotal />
       </View>
     );
   }
